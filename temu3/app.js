@@ -1,18 +1,36 @@
-const http = require('http');
 const express = require('express');
-const app = exoress();
+const bodyParser = require('body-parser');
+const app = express();
+const port = 3000;
 
-app.use(express.static('public'));
+// Array untuk menampung input
+let product =[];
 
-app.get('/',(req,res)=>{
-  res.send('Halo Selamat Datang di Express!');
+app.set('view engine', 'ejs');
+app.use(bodyParser.urlencoded({extended: true}));
+
+// Halaman daftar produk
+app.get('/minimarket', (req, res)=> {
+  res.render('/minimarket', {product});
 });
 
-app.get('/about',(req,res)=>{
-  res.send('<h1>Tentang kami</h1><p>Halaman tambahan dengan HTML Langsung...</p>')
+app.get('/add', req, res =>{
+   res.render('form');
 })
 
-const PORT = 3000;
-app.listen(PORT,()=>{
-  console.log('Server berjalan di http//localhost:${PORT}');
+// Terima data form
+app.post('/add', (req, res) => {
+  const{name,qty, price} = req.body;
+
+  products.push({
+    name : name,
+    qty: parselInt(qty),
+    price: parselInt(price)
+  });
+
+    res.redirect('/minimarket');
+});
+
+app.listen(port,() => {
+  console.log('Server running at http://localhost:${port}')
 });
