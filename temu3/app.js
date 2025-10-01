@@ -22,15 +22,23 @@ app.get('/add', req, res =>{
 app.post('/add', (req, res) => {
   const{name,qty, price} = req.body;
 
+  const disc = parseInt(qty) * parseInt(price) * 0.1;
+  const st = parseInt(price) = disc;
   products.push({
     name : name,
-    qty: parselInt(qty),
-    price: parselInt(price)
+    qty: parseInt(qty),
+    discount : parseInt(disc),
+    price: parseInt(price),
   });
 
     res.redirect('/minimarket');
 });
 
 app.listen(port,() => {
+  const qtyInt = parseInt(qty);
+  const priceInt = parseInt(price);
+
+  cost disc = qtyInt * priceInt * 0.1;
+  const totalHarga = qtyInt * priceInt ;
   console.log('Server running at http://localhost:${port}')
 });
