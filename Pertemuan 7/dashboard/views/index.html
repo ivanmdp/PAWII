@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard Penjualan Barang</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f5f6fa;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background: #2c3e50;
+      color: #fff;
+      text-align: center;
+      padding: 20px 0;
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      background: #34495e;
+    }
+    nav a {
+      color: #fff;
+      padding: 15px 20px;
+      text-decoration: none;
+      transition: background 0.3s;
+    }
+    nav a:hover {
+      background: #1abc9c;
+    }
+    main {
+      padding: 20px;
+      text-align: center;
+    }
+    .card {
+      background: #fff;
+      padding: 20px;
+      margin: 15px auto;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      width: 50%;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Dashboard Penjualan Barang</h1>
+    <p>Selamat datang di sistem penjualan sederhana</p>
+  </header>
+
+  <nav>
+    <a href="/tambah">Input Data Barang</a>
+    <a href="/daftar">Daftar Barang</a>
+    <a href="#penjualan">Transaksi Penjualan</a>
+    <a href="#laporan">Laporan Penjualan</a>
+    <a href="#keluar">Keluar</a>
+  </nav>
+
+  <main>
+    <div id="input" class="card">
+      <h2>Input Data Barang</h2>
+      <p>Form untuk menambahkan barang baru ke sistem.</p>
+    </div>
+
+    <div id="list" class="card">
+      <h2>Daftar Barang</h2>
+      <p>Menampilkan semua barang yang tersedia di toko.</p>
+    </div>
+
+    <div id="penjualan" class="card">
+      <h2>Transaksi Penjualan</h2>
+      <p>Menu untuk mencatat transaksi penjualan barang ke pelanggan.</p>
+    </div>
+
+    <div id="laporan" class="card">
+      <h2>Laporan Penjualan</h2>
+      <p>Menampilkan laporan ringkas dari transaksi yang sudah dilakukan.</p>
+    </div>
+
+    <div id="keluar" class="card">
+      <h2>Keluar</h2>
+      <p>Menutup sesi dashboard atau kembali ke halaman login.</p>
+    </div>
+  </main>
+</body>
+</html>
