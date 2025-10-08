@@ -1,5 +1,13 @@
+Lankah-langkah Untuk Menjalankan/Mengoperasikan Terminal
 express dashboard 
 cd dashboard
 npm init -y
+npm install
 npm install -g express-generator
 npm install express ejs body-parser
+npx express generator
+npm update 
+node app.js untuk menjalankan atau menampilkan hasil yang ada di Terminal local website 
+
+mkdir controller untuk membuat atau menampilkan controller 
+mkdir models untuk membuat atau menampilkan models
